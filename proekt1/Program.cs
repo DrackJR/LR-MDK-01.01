@@ -10,6 +10,7 @@ namespace proekt1
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("ГитХаб топ сикрет");
         }
     }
 }
