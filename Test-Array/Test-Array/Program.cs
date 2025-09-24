@@ -16,6 +16,11 @@ namespace Test_Array
             array[2] = "three";
 
             array[1] = "four";
+
+            foreach (string show in array)
+            {
+                Console.WriteLine(show);
+            }
         }
     }
 }
