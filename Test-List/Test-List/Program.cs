@@ -16,6 +16,10 @@ namespace Test_List
             Text.Add("Three");
             Text.Add("Four");
             Text.Add("Five");
+
+            Console.WriteLine("Введите текст: ");
+            string input = Console.ReadLine();
+            Console.WriteLine(input);
         }
     }
 }
