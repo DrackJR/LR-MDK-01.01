@@ -19,7 +19,21 @@ namespace Test_List
 
             Console.WriteLine("Введите текст: ");
             string input = Console.ReadLine();
-            Console.WriteLine(input);
+            //Console.WriteLine(input);
+
+            List<string> list = new List<string>();
+
+            for (int i = 0; i < Text.Count; i++)
+            {
+                if (Text[i].Contains(input))
+                {
+                    list.Add(Text[i]);
+                }
+            }
+            foreach (string element in list)
+            {
+                Console.WriteLine(element);
+            }
         }
     }
 }
