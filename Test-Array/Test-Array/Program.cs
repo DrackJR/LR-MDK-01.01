@@ -10,6 +10,10 @@ namespace Test_Array
     {
         static void Main(string[] args)
         {
+            string[] array = new string[3];
+            array[0] = "one";
+            array[1] = "two";
+            array[2] = "three";
         }
     }
 }
