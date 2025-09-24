@@ -21,6 +21,11 @@ namespace Test_Array
             {
                 Console.WriteLine(show);
             }
+
+            string[] massiv = new string[3];
+            massiv[0] = array[2];
+            massiv[1] = array[1];
+            massiv[2] = array[0];
         }
     }
 }
