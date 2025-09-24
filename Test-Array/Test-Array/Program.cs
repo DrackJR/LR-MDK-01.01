@@ -14,6 +14,8 @@ namespace Test_Array
             array[0] = "one";
             array[1] = "two";
             array[2] = "three";
+
+            array[1] = "four";
         }
     }
 }
