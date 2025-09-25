@@ -20,9 +20,23 @@ namespace work__1
                 array[index] = Convert.ToInt32(Console.ReadLine());
             }
             Console.Write("Массив = ");
-            foreach (int l in array)
+
+            foreach (int check in array)
             {
-                Console.Write(l+" ");
+                Console.Write(check + " ");
+            }
+            Console.WriteLine();
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                for (int j = i + 1; j < array.Length; j++)
+                {
+                    if (array[i] == array[j])
+                    {
+                        Console.WriteLine("В массиве присутствуют одинаковые элементы");
+                        return;
+                    }
+                }
             }
         }
     }
