@@ -15,6 +15,15 @@ namespace work__1
             int temp = Convert.ToInt32(s);
             int[] array = new int[temp];
 
+            for (int index = 0; index < array.Length; index++)
+            {
+                array[index] = Convert.ToInt32(Console.ReadLine());
+            }
+            Console.Write("Массив = ");
+            foreach (int l in array)
+            {
+                Console.Write(l+" ");
+            }
         }
     }
 }
