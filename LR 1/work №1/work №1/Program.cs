@@ -10,6 +10,7 @@ namespace work__1
     {
         static void Main(string[] args)
         {
+            //Вариант 6
             Console.WriteLine("Введите длину массива");
             string s = Console.ReadLine();
             int temp = Convert.ToInt32(s);
