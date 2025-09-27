@@ -21,5 +21,19 @@ namespace Functions
             }
             return list;
         }
+
+        static public List<int> FindNumbersOfList(string lines, List<string> newlist)
+        {
+            List<int> indexs = new List<int>();
+
+            for (int index = 0; index < newlist.Count; index++)
+            {
+                if (newlist[index].Contains(lines))
+                {
+                    indexs.Add(index);
+                }
+            }
+            return indexs;
+        }
     }
 }
