@@ -10,6 +10,7 @@ namespace Functions
     {
         static void Main(string[] args)
         {
+            List<string> list = ListStringModule.FillTheList();
         }
     }
 }
