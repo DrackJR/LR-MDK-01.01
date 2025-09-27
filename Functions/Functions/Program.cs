@@ -10,7 +10,6 @@ namespace Functions
     {
         static void Main(string[] args)
         {
-
         }
     }
 }
