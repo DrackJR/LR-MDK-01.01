@@ -31,18 +31,25 @@ namespace work__2
             Console.WriteLine();
             Console.WriteLine();
 
-            int[] arrayShow = new int[2000];
+            List<int> listShow = new List<int>();
+            int leftBorder = 0;
+            int rightBorder = 2;
 
-            for (int i = 0; i < array.Length; i = i + 2)
+            do
             {
-                int j = i + 2;
-                arrayShow[i] = array[i] + array[j];
+                listShow.Add(array[leftBorder] + array[rightBorder]);
+                leftBorder = rightBorder;
+                rightBorder += 2;
+            } while (rightBorder < array.Length);
+
+            Console.Write("[");
+
+            for (int i = 0; i < listShow.Count - 1; i++)
+            {
+                Console.Write(listShow[i] + ",");
             }
 
-            foreach (int elementValue in arrayShow)
-            {
-                Console.Write(elementValue + ",");
-            }
+            Console.WriteLine(listShow.Last() + "]");
         }
     }
 }
