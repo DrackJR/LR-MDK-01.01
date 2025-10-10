@@ -12,12 +12,12 @@ namespace work__1
         {
             //Вариант 6
             Console.WriteLine("Введите длину массива");
-            string s = Console.ReadLine();
-            int temp = Convert.ToInt32(s);
-            int[] array = new int[temp];
+            int arrayLength = Convert.ToInt32(Console.ReadLine());
+            int[] array = new int[arrayLength];
 
             for (int index = 0; index < array.Length; index++)
             {
+                Console.Write("Введите " + (index + 1)+ " элемент массива = ");
                 array[index] = Convert.ToInt32(Console.ReadLine());
             }
             Console.Write("Массив = ");
@@ -39,6 +39,7 @@ namespace work__1
                     }
                 }
             }
+            Console.WriteLine("В массиве отсутствуют одинаковые элементы");
         }
     }
 }
