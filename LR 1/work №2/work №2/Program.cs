@@ -18,10 +18,14 @@ namespace work__2
                 array[i] = randomValue.Next(1, 5001);
             }
 
-            foreach (int elementValue in array)
+            Console.Write("[");
+
+            for (int i = 0; i < array.Length - 1; i++)
             {
-                Console.Write(elementValue + ",");
+                Console.Write(array[i] + ",");
             }
+
+            Console.WriteLine(array[array.Length - 1] + "]");
 
             Console.WriteLine();
             Console.WriteLine();
