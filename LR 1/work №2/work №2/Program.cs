@@ -15,7 +15,7 @@ namespace work__2
             Random randomValue = new Random();
             for (int i = 0; i < array.Length; i++)
             {
-                array[i] = randomValue.Next(1, 5000);
+                array[i] = randomValue.Next(1, 5001);
             }
 
             foreach (int elementValue in array)
