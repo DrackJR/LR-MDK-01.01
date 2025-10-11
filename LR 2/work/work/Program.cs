@@ -7,6 +7,8 @@ namespace work
     {
         static void Main()
         {
+            //Вариант 3
+
         }
     }
 }
