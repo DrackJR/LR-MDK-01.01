@@ -35,12 +35,12 @@ namespace work__2
             int leftBorder = 0;
             int rightBorder = 2;
 
-            do
+            while (rightBorder < array.Length)
             {
                 listShow.Add(array[leftBorder] + array[rightBorder]);
                 leftBorder = rightBorder;
                 rightBorder += 2;
-            } while (rightBorder < array.Length);
+            } 
 
             Console.Write("[");
 
