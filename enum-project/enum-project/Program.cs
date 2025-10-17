@@ -27,7 +27,7 @@ namespace enum_project
             }
             else if (season == Season.Autumn)
             {
-                Console.WriteLine("Сейчас осень");
+                Console.WriteLine("Сейчас oсень");
             }
             else
             {
