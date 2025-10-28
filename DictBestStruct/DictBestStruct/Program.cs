@@ -12,8 +12,14 @@ namespace DictBestStruct
         static public void ShowCountElement(Dictionary<string, List <string>> dict)
         {
             Console.WriteLine("Укажите жанр игры(Шутер, Приключение, Головоломки): ");
-            string userQuery = Console.ReadLine();
-            if (dict.ContainsKey(userQuery))
+            string userQuery = Console.ReadLine().ToLower();
+            List<string> allKeys = new List<string>(dict.Keys);
+            for (int i = 0; i < allKeys.Count; i++)
+            {
+                allKeys[i].ToLower();
+                Console.WriteLine(i);
+            }
+            if (allKeys.Contains(userQuery))
             {
                 List<string> value = dict[userQuery];
                 Console.WriteLine("Число элементов: " + value.Count);
@@ -27,7 +33,7 @@ namespace DictBestStruct
             Dictionary<string, List<string>> dict = new Dictionary<string, List<string>>();
             dict.Add("Шутер", new List<string> {"csgo"});
             dict.Add("Приключение", new List<string> {"Uncharted 4", "The Last Of Us"});
-            dict.Add("Головоломки", new List<string> { "Machinarium", "Portal 2", "Patrick's Parabox" });
+            dict.Add("Головоломки", new List<string> {"Machinarium", "Portal 2", "Patrick's Parabox"});
 
             Console.Write(string.Join(", ", dict.Keys));
             Console.WriteLine();
