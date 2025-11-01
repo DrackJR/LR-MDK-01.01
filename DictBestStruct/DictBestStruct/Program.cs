@@ -14,11 +14,9 @@ namespace DictBestStruct
         {
             Console.WriteLine("Укажите жанр игры (Шутер, Приключение, Головоломки): ");
             string userQuery = Console.ReadLine().ToLower();
-            List<string> allKeys = new List<string>();
             foreach (string key in dict.Keys)
             {
-                allKeys.Add(key.ToLower());
-                if (allKeys.Contains(userQuery))
+                if (key.ToLower() == userQuery)
                 {
                     List<string> value = dict[key];
                     Console.WriteLine("Число элементов: " + value.Count);
@@ -26,10 +24,7 @@ namespace DictBestStruct
                     return;
                 }
             }
-            if (!allKeys.Contains(userQuery))
-            {
                 Console.WriteLine("Ай-яй-яй, такого жанра нету");
-            }
         }
         static void Main(string[] args)
         {
