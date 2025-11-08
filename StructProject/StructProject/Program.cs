@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading;
 
 namespace StructProject
@@ -43,11 +44,20 @@ namespace StructProject
                 Console.WriteLine($"{v.begin.Name}:({v.begin.X}, {v.begin.Y})" +
                   $" | {v.end.Name}:({v.end.X}, {v.end.Y})");
 
-                Thread.Sleep(2000);
+                //Thread.Sleep(2000);
             }
 
             Console.WriteLine("Длина 5 вектора = " 
                 + Point.CalcLenVector(allVectors[4].begin, allVectors[4].end));
+            Console.WriteLine();
+            List<double> listOfCalcVectors = new List<double>();
+            listOfCalcVectors = Vector.CalcVectors(allVectors);
+
+            for (int i = 0; i< listOfCalcVectors.Count; i++)
+            {
+                Console.WriteLine("Длина " + (i+1) + " вектора = " + listOfCalcVectors[i]);
+            }
+
 
         }
     }
