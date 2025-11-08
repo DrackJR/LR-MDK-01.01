@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35818.85 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DictBestStruct", "DictBestStruct\DictBestStruct.csproj", "{78FCAACE-8A67-4465-89E1-71C2C2970BBB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{78FCAACE-8A67-4465-89E1-71C2C2970BBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78FCAACE-8A67-4465-89E1-71C2C2970BBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78FCAACE-8A67-4465-89E1-71C2C2970BBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78FCAACE-8A67-4465-89E1-71C2C2970BBB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0E3DDA49-9F4F-4ED7-B50B-C84326D67582}
+	EndGlobalSection
+EndGlobal
