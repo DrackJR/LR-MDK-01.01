@@ -6,6 +6,8 @@ namespace NFS_Console
     {
         static void Main(string[] args)
         {
+            Car auto = new Car();
+            auto.SetModel("Лада");
         }
     }
 }

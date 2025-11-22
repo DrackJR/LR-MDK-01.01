@@ -6,5 +6,12 @@ namespace NFS_Console
     {
         private string model_;
         private double speed_;
+
+        public void SetModel(string model)
+        {
+            model_ = model;
+        }
+
+
     }
 }
