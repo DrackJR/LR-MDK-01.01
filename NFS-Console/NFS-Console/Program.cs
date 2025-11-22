@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace NFS_Console
 {
@@ -22,6 +23,10 @@ namespace NFS_Console
 
             Print(auto);
             Print(merc);
+
+            List<Car> cars = new List<Car>();
+            cars.Add(auto);
+            cars.Add(merc);
         }
     }
 }
