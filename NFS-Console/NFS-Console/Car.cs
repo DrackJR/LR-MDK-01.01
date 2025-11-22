@@ -1,5 +1,4 @@
 ﻿
-
 namespace NFS_Console
 {
     public class Car
@@ -12,6 +11,9 @@ namespace NFS_Console
             model_ = model;
         }
 
-
+        public string GetModel()
+        {
+            return model_;
+        }
     }
 }

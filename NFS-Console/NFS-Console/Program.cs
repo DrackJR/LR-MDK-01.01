@@ -1,4 +1,4 @@
-﻿
+﻿using System;
 
 namespace NFS_Console
 {
@@ -8,6 +8,7 @@ namespace NFS_Console
         {
             Car auto = new Car();
             auto.SetModel("Лада");
+            Console.WriteLine(auto.GetModel());
         }
     }
 }
