@@ -15,5 +15,15 @@ namespace NFS_Console
         {
             return model_;
         }
+
+        public void SetSpeed(double speed)
+        {
+            speed_ = speed;
+        }
+
+        public double GetSpeed()
+        {
+            return speed_;
+        }
     }
 }

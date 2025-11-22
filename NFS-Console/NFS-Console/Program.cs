@@ -4,11 +4,24 @@ namespace NFS_Console
 {
     class Program
     {
-        static void Main(string[] args)
+        static public void Print(Car car)
+        {
+            Console.WriteLine(car.GetModel());
+        }
+        static void Main()
         {
             Car auto = new Car();
             auto.SetModel("Лада");
+            auto.SetSpeed(150);
             Console.WriteLine(auto.GetModel());
+            
+
+            Car merc = new Car();
+            merc.SetModel("Мерс");
+            merc.SetSpeed(300);
+
+            Print(auto);
+            Print(merc);
         }
     }
 }
