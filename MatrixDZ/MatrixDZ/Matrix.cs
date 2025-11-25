@@ -1,5 +1,7 @@
 ﻿
 
+using System;
+
 namespace MatrixDZ
 {
     public class Matrix
@@ -40,6 +42,26 @@ namespace MatrixDZ
         public int GetColumns()
         {
             return columns_;
+        }
+
+        // Метод вычисления определителя квадратной матрицы
+        public int CalcDeterminant()
+        {
+            if (rows_ != columns_)
+            {
+                Console.WriteLine("Матрица не квадратная");
+                return 0;
+            }
+            if (rows_ == 1)
+            {
+                return values_[0, 0];
+            }
+            if (rows_ == 2)
+            {
+                return values_[0, 0] * values_[1, 1] - values_[0, 1] * values_[1, 0];
+            }
+            Console.WriteLine("Матрица не квадратная");
+            return 0;
         }
     }
 }
