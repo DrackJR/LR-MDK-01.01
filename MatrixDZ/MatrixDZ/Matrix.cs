@@ -22,5 +22,12 @@ namespace MatrixDZ
         {
             values_[row, column] = value;
         }
+
+        // Метод получения значения из ячейки матрицы
+        public int GetValueMatrix(int row, int column)
+        {
+            int value = values_[row, column];
+            return value;
+        }
     }
 }
