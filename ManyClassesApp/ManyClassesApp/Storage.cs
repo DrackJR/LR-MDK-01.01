@@ -8,8 +8,8 @@ namespace ManyClassesApp
 {
     public class Storage
     {        
-        private int identifier;
-        private string location;
-        private Dictionary<Product, int> products;
+        private int identifier_;
+        private string location_;
+        private Dictionary<Product, int> products_;
     }
 }
