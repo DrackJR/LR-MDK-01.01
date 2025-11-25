@@ -63,5 +63,18 @@ namespace MatrixDZ
             Console.WriteLine("Матрица не квадратная");
             return 0;
         }
+
+        // Метод вывода матрицы на консоль
+        public void Print()
+        {
+            for (int i = 0; i < rows_; i++)
+            {
+                for (int j = 0; j < columns_; j++)
+                {
+                    Console.Write(values_[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
+        }
     }
 }
