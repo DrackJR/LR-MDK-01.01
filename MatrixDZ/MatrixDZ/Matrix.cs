@@ -29,5 +29,17 @@ namespace MatrixDZ
             int value = values_[row, column];
             return value;
         }
+
+        // Метод получения строк матрицы
+        public int GetRows()
+        {
+            return rows_;
+        }
+
+        // Метод получения столбцов матрицы
+        public int GetColumns()
+        {
+            return columns_;
+        }
     }
 }
