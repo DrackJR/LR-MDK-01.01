@@ -5,8 +5,7 @@ namespace NewTaskWinForms
 {
     public partial class MainForm: Form
     {
-        private int number_;
-        private DateTimePicker CountdownTime2;        
+        private int number_;       
         public MainForm()
         {
             InitializeComponent();
