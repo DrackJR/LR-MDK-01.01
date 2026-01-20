@@ -33,6 +33,7 @@ namespace WinFormsTest
             {
                 filePath = op.FileName;
                 FileNamesListBox.Items.Add(filePath);
+                FileNamesListBox.SelectedIndex = FileNamesListBox.Items.Count - 1;
             }            
         }
 
@@ -56,18 +57,47 @@ namespace WinFormsTest
 
         private void EditButton_Click(object sender, System.EventArgs e)
         {
-            //string filePath;
-            //if (FileNamesListBox.SelectedItem != null)
-            //{
-            //    OpenFileDialog op = new OpenFileDialog();
-            //    op.Filter = "jpeg files (*.jpg)|*.jpg|png files (*.png)|*.png|bmp files (*.bmp)|*.bmp";
-            //    if (op.ShowDialog() == DialogResult.OK)
-            //    {
-            //        filePath = op.FileName;
-            //        FileNamesListBox.Items.AddRange();
+            string filePath;
+            if (FileNamesListBox.SelectedItem != null)
+            {
+                int index = FileNamesListBox.SelectedIndex;
+                OpenFileDialog op = new OpenFileDialog();
+                op.Filter = "jpeg files (*.jpg)|*.jpg|png files (*.png)|*.png|bmp files (*.bmp)|*.bmp";
+                if (op.ShowDialog() == DialogResult.OK)
+                {
+                    filePath = op.FileName;
+                    FileNamesListBox.Items.Insert(index + 1, filePath);
+                    FileNamesListBox.Items.RemoveAt(FileNamesListBox.SelectedIndex);
+                    FileNamesListBox.SelectedIndex = FileNamesListBox.SelectedIndex + 1;
+                }
+            }
+        }
 
-            //    }
-            //}
+        private void SaveButton_Click(object sender, System.EventArgs e)
+        {
+            if (FileNamesListBox.SelectedItem != null)
+            {
+                SaveFileDialog sf = new SaveFileDialog();
+                sf.Filter = "jpeg files (*.jpg)|*.jpg|png files (*.png)|*.png|bmp files (*.bmp)|*.bmp";
+                if (sf.ShowDialog() == DialogResult.OK)
+                {
+                    System.Drawing.Imaging.ImageFormat format = System.Drawing.Imaging.ImageFormat.Jpeg;
+
+                    switch (sf.FilterIndex)
+                    {
+                        case 1:
+                            format = System.Drawing.Imaging.ImageFormat.Jpeg;
+                            break;
+                        case 2:
+                            format = System.Drawing.Imaging.ImageFormat.Png;
+                            break;
+                        case 3:
+                            format = System.Drawing.Imaging.ImageFormat.Bmp;
+                            break;
+                    }
+                    PictureArea.Image.Save(sf.FileName, format);
+                }
+            }
         }
     }
 }

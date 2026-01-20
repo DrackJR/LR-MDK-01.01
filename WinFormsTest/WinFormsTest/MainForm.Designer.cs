@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.ButtonsPanel = new System.Windows.Forms.Panel();
-            this.ListPanel = new System.Windows.Forms.Panel();
-            this.PicturePanel = new System.Windows.Forms.Panel();
-            this.SaveButton = new System.Windows.Forms.Button();
-            this.LoadButton = new System.Windows.Forms.Button();
-            this.EditButton = new System.Windows.Forms.Button();
             this.DeleteButton = new System.Windows.Forms.Button();
+            this.EditButton = new System.Windows.Forms.Button();
+            this.LoadButton = new System.Windows.Forms.Button();
+            this.SaveButton = new System.Windows.Forms.Button();
+            this.ListPanel = new System.Windows.Forms.Panel();
             this.FileNamesListBox = new System.Windows.Forms.ListBox();
+            this.PicturePanel = new System.Windows.Forms.Panel();
             this.PictureArea = new System.Windows.Forms.PictureBox();
             this.ButtonsPanel.SuspendLayout();
             this.ListPanel.SuspendLayout();
@@ -55,45 +55,20 @@
             this.ButtonsPanel.Size = new System.Drawing.Size(800, 76);
             this.ButtonsPanel.TabIndex = 0;
             // 
-            // ListPanel
+            // DeleteButton
             // 
-            this.ListPanel.Controls.Add(this.FileNamesListBox);
-            this.ListPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ListPanel.Location = new System.Drawing.Point(0, 0);
-            this.ListPanel.Name = "ListPanel";
-            this.ListPanel.Size = new System.Drawing.Size(200, 374);
-            this.ListPanel.TabIndex = 1;
-            // 
-            // PicturePanel
-            // 
-            this.PicturePanel.Controls.Add(this.PictureArea);
-            this.PicturePanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PicturePanel.Location = new System.Drawing.Point(200, 0);
-            this.PicturePanel.Name = "PicturePanel";
-            this.PicturePanel.Size = new System.Drawing.Size(600, 374);
-            this.PicturePanel.TabIndex = 2;
-            // 
-            // SaveButton
-            // 
-            this.SaveButton.Location = new System.Drawing.Point(87, 23);
-            this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(113, 41);
-            this.SaveButton.TabIndex = 0;
-            this.SaveButton.Text = "Сохранить";
-            this.SaveButton.UseVisualStyleBackColor = true;
-            // 
-            // LoadButton
-            // 
-            this.LoadButton.Location = new System.Drawing.Point(261, 23);
-            this.LoadButton.Name = "LoadButton";
-            this.LoadButton.Size = new System.Drawing.Size(113, 41);
-            this.LoadButton.TabIndex = 1;
-            this.LoadButton.Text = "Загрузить";
-            this.LoadButton.UseVisualStyleBackColor = true;
-            this.LoadButton.Click += new System.EventHandler(this.LoadButton_Click);
+            this.DeleteButton.AllowDrop = true;
+            this.DeleteButton.Location = new System.Drawing.Point(604, 23);
+            this.DeleteButton.Name = "DeleteButton";
+            this.DeleteButton.Size = new System.Drawing.Size(113, 41);
+            this.DeleteButton.TabIndex = 3;
+            this.DeleteButton.Text = "Удалить";
+            this.DeleteButton.UseVisualStyleBackColor = true;
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
             // EditButton
             // 
+            this.EditButton.AllowDrop = true;
             this.EditButton.Location = new System.Drawing.Point(437, 23);
             this.EditButton.Name = "EditButton";
             this.EditButton.Size = new System.Drawing.Size(113, 41);
@@ -102,15 +77,36 @@
             this.EditButton.UseVisualStyleBackColor = true;
             this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
             // 
-            // DeleteButton
+            // LoadButton
             // 
-            this.DeleteButton.Location = new System.Drawing.Point(604, 23);
-            this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(113, 41);
-            this.DeleteButton.TabIndex = 3;
-            this.DeleteButton.Text = "Удалить";
-            this.DeleteButton.UseVisualStyleBackColor = true;
-            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
+            this.LoadButton.AutoSize = true;
+            this.LoadButton.Location = new System.Drawing.Point(261, 23);
+            this.LoadButton.Name = "LoadButton";
+            this.LoadButton.Size = new System.Drawing.Size(113, 41);
+            this.LoadButton.TabIndex = 1;
+            this.LoadButton.Text = "Загрузить";
+            this.LoadButton.UseVisualStyleBackColor = true;
+            this.LoadButton.Click += new System.EventHandler(this.LoadButton_Click);
+            // 
+            // SaveButton
+            // 
+            this.SaveButton.AutoSize = true;
+            this.SaveButton.Location = new System.Drawing.Point(87, 23);
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.Size = new System.Drawing.Size(113, 41);
+            this.SaveButton.TabIndex = 0;
+            this.SaveButton.Text = "Сохранить";
+            this.SaveButton.UseVisualStyleBackColor = true;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
+            // 
+            // ListPanel
+            // 
+            this.ListPanel.Controls.Add(this.FileNamesListBox);
+            this.ListPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ListPanel.Location = new System.Drawing.Point(0, 0);
+            this.ListPanel.Name = "ListPanel";
+            this.ListPanel.Size = new System.Drawing.Size(200, 374);
+            this.ListPanel.TabIndex = 1;
             // 
             // FileNamesListBox
             // 
@@ -121,6 +117,15 @@
             this.FileNamesListBox.Size = new System.Drawing.Size(200, 374);
             this.FileNamesListBox.TabIndex = 0;
             this.FileNamesListBox.SelectedIndexChanged += new System.EventHandler(this.FileNamesListBox_SelectedIndexChanged);
+            // 
+            // PicturePanel
+            // 
+            this.PicturePanel.Controls.Add(this.PictureArea);
+            this.PicturePanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PicturePanel.Location = new System.Drawing.Point(200, 0);
+            this.PicturePanel.Name = "PicturePanel";
+            this.PicturePanel.Size = new System.Drawing.Size(600, 374);
+            this.PicturePanel.TabIndex = 2;
             // 
             // PictureArea
             // 
@@ -135,13 +140,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.PicturePanel);
             this.Controls.Add(this.ListPanel);
             this.Controls.Add(this.ButtonsPanel);
+            this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "Test";
             this.ButtonsPanel.ResumeLayout(false);
+            this.ButtonsPanel.PerformLayout();
             this.ListPanel.ResumeLayout(false);
             this.PicturePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PictureArea)).EndInit();
