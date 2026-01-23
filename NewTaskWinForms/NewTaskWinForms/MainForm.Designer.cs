@@ -33,7 +33,7 @@
             this.CheckButton = new System.Windows.Forms.Button();
             this.InputTextBox = new System.Windows.Forms.TextBox();
             this.RichTextBoxPanel = new System.Windows.Forms.Panel();
-            this.StatisticRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.statisticRichTextBox = new System.Windows.Forms.RichTextBox();
             this.CountdownTime = new System.Windows.Forms.DateTimePicker();
             this.Timer = new System.Windows.Forms.Timer(this.components);
             this.LabelCount = new System.Windows.Forms.Label();
@@ -71,21 +71,21 @@
             // 
             // RichTextBoxPanel
             // 
-            this.RichTextBoxPanel.Controls.Add(this.StatisticRichTextBox);
+            this.RichTextBoxPanel.Controls.Add(this.statisticRichTextBox);
             this.RichTextBoxPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.RichTextBoxPanel.Location = new System.Drawing.Point(0, 286);
             this.RichTextBoxPanel.Name = "RichTextBoxPanel";
             this.RichTextBoxPanel.Size = new System.Drawing.Size(783, 100);
             this.RichTextBoxPanel.TabIndex = 3;
             // 
-            // StatisticRichTextBox
+            // statisticRichTextBox
             // 
-            this.StatisticRichTextBox.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.StatisticRichTextBox.Location = new System.Drawing.Point(0, 4);
-            this.StatisticRichTextBox.Name = "StatisticRichTextBox";
-            this.StatisticRichTextBox.Size = new System.Drawing.Size(783, 96);
-            this.StatisticRichTextBox.TabIndex = 0;
-            this.StatisticRichTextBox.Text = "";
+            this.statisticRichTextBox.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.statisticRichTextBox.Location = new System.Drawing.Point(0, 4);
+            this.statisticRichTextBox.Name = "statisticRichTextBox";
+            this.statisticRichTextBox.Size = new System.Drawing.Size(783, 96);
+            this.statisticRichTextBox.TabIndex = 0;
+            this.statisticRichTextBox.Text = "";
             // 
             // CountdownTime
             // 
@@ -93,7 +93,7 @@
             this.CountdownTime.CustomFormat = "mm:ss";
             this.CountdownTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CountdownTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.CountdownTime.Location = new System.Drawing.Point(344, 61);
+            this.CountdownTime.Location = new System.Drawing.Point(324, 61);
             this.CountdownTime.Name = "CountdownTime";
             this.CountdownTime.Size = new System.Drawing.Size(138, 38);
             this.CountdownTime.TabIndex = 4;
@@ -140,10 +140,10 @@
         private System.Windows.Forms.Button CheckButton;
         private System.Windows.Forms.TextBox InputTextBox;
         private System.Windows.Forms.Panel RichTextBoxPanel;
-        private System.Windows.Forms.RichTextBox StatisticRichTextBox;
         private System.Windows.Forms.DateTimePicker CountdownTime;
         private System.Windows.Forms.Timer Timer;
         private System.Windows.Forms.Label LabelCount;
+        private System.Windows.Forms.RichTextBox statisticRichTextBox;
     }
 }
 
