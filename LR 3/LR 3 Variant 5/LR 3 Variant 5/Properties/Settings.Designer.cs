@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LR_3_Variant5.Properties
+namespace LR_3_Variant_5.Properties
 {
 
 

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LR_3_Variant5
+namespace LR_3_Variant_5
 {
-    static class Program
+    internal static class Program
     {
         /// <summary>
         /// Главная точка входа для приложения.
@@ -14,7 +14,6 @@ namespace LR_3_Variant5
         [STAThread]
         static void Main()
         {
-            //Вариант 5
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm());

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LR_3_Variant5
+﻿namespace LR_3_Variant_5
 {
     public class Dish
     {
@@ -12,11 +6,6 @@ namespace LR_3_Variant5
         private double price_;
         private string photo_;
         private string description_;
-
-        public Dish() 
-        {
-
-        }
 
         public Dish(string name, double price, string photo, string description)
         {
@@ -31,20 +20,19 @@ namespace LR_3_Variant5
             get { return name_; }
         }
 
-
-        public double Price
+        public string Price
         {
-            get { return price_; }
-        }
-
-        public string Description
-        {
-            get { return description_; }
+            get { return price_.ToString(); }
         }
 
         public string Photo
         {
             get { return photo_; }
+        }
+
+        public string Description
+        {
+            get { return description_; }
         }
     }
 }

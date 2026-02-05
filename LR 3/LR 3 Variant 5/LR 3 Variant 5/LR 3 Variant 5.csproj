@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2ED8CB0B-3EDD-42B4-9520-CD695DDBCB29}</ProjectGuid>
+    <ProjectGuid>{7709BB75-DC6E-4B72-94C9-627DA0EA93CB}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>LR_3_Variant5</RootNamespace>
-    <AssemblyName>LR 3 Variant5</AssemblyName>
+    <RootNamespace>LR_3_Variant_5</RootNamespace>
+    <AssemblyName>LR 3 Variant 5</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

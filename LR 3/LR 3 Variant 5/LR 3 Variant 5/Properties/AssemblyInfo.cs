@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Общие сведения об этой сборке предоставляются следующим набором
 // набора атрибутов. Измените значения этих атрибутов для изменения сведений,
 // связанных со сборкой.
-[assembly: AssemblyTitle("LR 3 Variant5")]
+[assembly: AssemblyTitle("LR 3 Variant 5")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("LR 3 Variant5")]
+[assembly: AssemblyProduct("LR 3 Variant 5")]
 [assembly: AssemblyCopyright("Copyright ©  2026")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Следующий GUID служит для идентификации библиотеки типов, если этот проект будет видимым для COM
-[assembly: Guid("2ed8cb0b-3edd-42b4-9520-cd695ddbcb29")]
+[assembly: Guid("7709bb75-dc6e-4b72-94c9-627da0ea93cb")]
 
 // Сведения о версии сборки состоят из указанных ниже четырех значений:
 //
