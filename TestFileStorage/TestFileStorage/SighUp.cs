@@ -17,7 +17,13 @@ namespace TestFileStorage
             string password = PasswordTextBox.Text;
             User user = new User(login, password);
 
-            if (password == null)
+            if (login == string.Empty)
+            {
+                MessageBox.Show("Вы не ввели логин");
+                return;
+            }
+
+            if (password == string.Empty)
             {
                 MessageBox.Show("Вы не ввели пароль");
                 return;

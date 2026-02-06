@@ -45,5 +45,18 @@ namespace TestFileStorage
             SighUpForm sighUp = new SighUpForm();
             sighUp.Show();
         }
+
+        private void LoginForm_MouseMove(object sender, MouseEventArgs e)
+        {
+            logins_.Clear();
+            List<User> allUsers = authorization_.Load();
+
+            foreach (User u in allUsers)
+            {
+                logins_.Add(u.Login);
+            }
+            LoginComboBox.DataSource = null;
+            LoginComboBox.DataSource = logins_;
+        }
     }
 }

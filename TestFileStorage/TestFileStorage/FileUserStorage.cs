@@ -17,7 +17,7 @@ namespace TestFileStorage
         public List<User> Load()
         {
             List<User> allUsers = new List<User>();
-            string path = @"D:\repo\TestFileStorage\info.txt";
+            string path = @".\info.txt";
             StreamReader sr = new StreamReader(path);
 
             string line;
@@ -63,7 +63,7 @@ namespace TestFileStorage
 
         public bool Registration(User u)
         {
-            string path = @"D:\repo\TestFileStorage\info.txt";
+            string path = @".\info.txt";
             StreamWriter sw = new StreamWriter(path, true);
             sw.WriteLine(u.Login + "-" + u.Password);
             sw.Close();
