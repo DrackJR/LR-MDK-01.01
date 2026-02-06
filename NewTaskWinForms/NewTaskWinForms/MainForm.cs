@@ -8,7 +8,7 @@ namespace NewTaskWinForms
     {
         private int number_;
         private int currentSecond_;
-        private int countOfTry;
+        private int countOfTry_;
         public MainForm()
         {
             InitializeComponent();
@@ -16,7 +16,7 @@ namespace NewTaskWinForms
             number_ = r.Next(1, 101);
             Timer.Start();
             currentSecond_ = 0;
-            countOfTry = 0;
+            countOfTry_ = 0;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -27,20 +27,21 @@ namespace NewTaskWinForms
             {
                 Timer.Stop();
                 MessageBox.Show("Время вышло, вы проиграли");
+                Application.Exit();
             }
         }
 
         private void CheckButton_Click(object sender, EventArgs e)
         {
-            countOfTry++;
+            countOfTry_++;
             if (Convert.ToInt32(InputTextBox.Text) > number_)
             {
-                statisticRichTextBox.AppendText(countOfTry + " попытка, ваше число = " + InputTextBox.Text + "\n");
+                statisticRichTextBox.AppendText(countOfTry_ + " попытка, ваше число = " + InputTextBox.Text + "\n");
                 MessageBox.Show("Ваше число больше загаданного");
             }
             else if (Convert.ToInt32(InputTextBox.Text) < number_)
             {
-                statisticRichTextBox.AppendText(countOfTry + " попытка, ваше число = " + InputTextBox.Text + "\n");
+                statisticRichTextBox.AppendText(countOfTry_ + " попытка, ваше число = " + InputTextBox.Text + "\n");
                 MessageBox.Show("Ваше число меньше загаданного");
             }
             else
