@@ -18,18 +18,36 @@ namespace TestFileStorage
         {
             List<User> allUsers = new List<User>();
             string path = @"D:\repo\TestFileStorage\info.txt";
-            StreamReader SR = new StreamReader(path);
+            StreamReader sr = new StreamReader(path);
 
             string line;
 
-            while ((line = SR.ReadLine()) != null)
+            while ((line = sr.ReadLine()) != null)
             {
-                 string[] lines = line.Split('-');
+                string[] lines = line.Split('-');
                 allUsers.Add(new User(lines[0], lines[1]));
             }
 
+            sr.Close();
+
             return allUsers;
         }
+
+        public bool CheckUser(string log)
+        {
+            List<User> identification = Load();
+
+            foreach(User u in identification)
+            {
+                if(u.Login == log)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
         private bool Contains(List<User> users, User user)
         {
             foreach (User u in users)
@@ -41,6 +59,15 @@ namespace TestFileStorage
             }
 
             return false;
+        }
+
+        public bool Registration(User u)
+        {
+            string path = @"D:\repo\TestFileStorage\info.txt";
+            StreamWriter sw = new StreamWriter(path, true);
+            sw.WriteLine(u.Login + "-" + u.Password);
+            sw.Close();
+            return true;
         }
     }
 }

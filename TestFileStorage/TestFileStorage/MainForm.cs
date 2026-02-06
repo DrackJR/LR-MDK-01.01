@@ -7,30 +7,29 @@ namespace TestFileStorage
 {
     public partial class LoginForm: Form
     {
-        private FileUserStorage authorization = new FileUserStorage();
-        private List<string> logins = new List<string>();
+        private FileUserStorage authorization_ = new FileUserStorage();
+        private List<string> logins_ = new List<string>();
         public LoginForm()
         {
             InitializeComponent();
-            List<User> allUsers = new List<User>();
-            allUsers = authorization.Load();
+            List<User> allUsers = authorization_.Load();
 
             foreach(User u in allUsers)
             {
-                logins.Add(u.Login);
+                logins_.Add(u.Login);
             }
 
-            LoginComboBox.DataSource = logins;
+            LoginComboBox.DataSource = logins_;
         }
 
         private void EnterButton_Click(object sender, EventArgs e)
         {
-            List<User> identification = authorization.Load();
+            List<User> identification = authorization_.Load();
 
             string login = LoginComboBox.Text;
             string password = PasswordTextBox.Text;
 
-            if (authorization.Authorize(login,password))
+            if (authorization_.Authorize(login,password))
             {
                 MessageBox.Show("Вы в системе");
             }
@@ -39,6 +38,12 @@ namespace TestFileStorage
             {
                 MessageBox.Show("Вход не удался");
             }
+        }
+
+        private void RegistrationButton_Click(object sender, EventArgs e)
+        {
+            SighUpForm sighUp = new SighUpForm();
+            sighUp.Show();
         }
     }
 }
