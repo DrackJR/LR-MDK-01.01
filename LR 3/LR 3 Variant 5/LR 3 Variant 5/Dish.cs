@@ -6,13 +6,15 @@
         private double price_;
         private string photo_;
         private string description_;
+        private string category_;
 
-        public Dish(string name, double price, string photo, string description)
+        public Dish(string name, double price, string photo, string description, string category)
         {
             name_ = name;
             price_ = price;
             photo_ = photo;
             description_ = description;
+            category_ = category;
         }
 
         public string Name
@@ -20,9 +22,9 @@
             get { return name_; }
         }
 
-        public string Price
+        public double Price
         {
-            get { return price_.ToString(); }
+            get { return price_; }
         }
 
         public string Photo
@@ -33,6 +35,11 @@
         public string Description
         {
             get { return description_; }
+        }
+
+        public string Category
+        {
+            get { return category_; }
         }
     }
 }

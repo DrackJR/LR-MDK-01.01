@@ -167,6 +167,7 @@
             this.Controls.Add(this.DescriptionLabel);
             this.Controls.Add(this.MenuComboBox);
             this.Controls.Add(this.CategoriesListBox);
+            this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "Лабораторная работа";
             ((System.ComponentModel.ISupportInitialize)(this.PhotoPictureBox)).EndInit();
