@@ -34,12 +34,12 @@
             this.PriceLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.PhotoPictureBox = new System.Windows.Forms.PictureBox();
             this.BuyButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.QuantityTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.BasketRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.PhotoPictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.PhotoPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,7 +56,7 @@
             // MenuComboBox
             // 
             this.MenuComboBox.FormattingEnabled = true;
-            this.MenuComboBox.Location = new System.Drawing.Point(126, 12);
+            this.MenuComboBox.Location = new System.Drawing.Point(120, 0);
             this.MenuComboBox.Name = "MenuComboBox";
             this.MenuComboBox.Size = new System.Drawing.Size(121, 21);
             this.MenuComboBox.TabIndex = 1;
@@ -64,8 +64,9 @@
             // 
             // DescriptionLabel
             // 
+            this.DescriptionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.DescriptionLabel.AutoSize = true;
-            this.DescriptionLabel.Location = new System.Drawing.Point(326, 412);
+            this.DescriptionLabel.Location = new System.Drawing.Point(219, 417);
             this.DescriptionLabel.Name = "DescriptionLabel";
             this.DescriptionLabel.Size = new System.Drawing.Size(35, 13);
             this.DescriptionLabel.TabIndex = 2;
@@ -73,8 +74,9 @@
             // 
             // PriceLabel
             // 
+            this.PriceLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.PriceLabel.AutoSize = true;
-            this.PriceLabel.Location = new System.Drawing.Point(326, 368);
+            this.PriceLabel.Location = new System.Drawing.Point(219, 373);
             this.PriceLabel.Name = "PriceLabel";
             this.PriceLabel.Size = new System.Drawing.Size(35, 13);
             this.PriceLabel.TabIndex = 2;
@@ -82,8 +84,9 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(244, 368);
+            this.label1.Location = new System.Drawing.Point(137, 373);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(33, 13);
             this.label1.TabIndex = 2;
@@ -91,25 +94,18 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(244, 412);
+            this.label2.Location = new System.Drawing.Point(137, 417);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Описание";
             // 
-            // PhotoPictureBox
-            // 
-            this.PhotoPictureBox.Location = new System.Drawing.Point(268, 12);
-            this.PhotoPictureBox.Name = "PhotoPictureBox";
-            this.PhotoPictureBox.Size = new System.Drawing.Size(551, 333);
-            this.PhotoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PhotoPictureBox.TabIndex = 3;
-            this.PhotoPictureBox.TabStop = false;
-            // 
             // BuyButton
             // 
-            this.BuyButton.Location = new System.Drawing.Point(645, 366);
+            this.BuyButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BuyButton.Location = new System.Drawing.Point(538, 371);
             this.BuyButton.Name = "BuyButton";
             this.BuyButton.Size = new System.Drawing.Size(75, 23);
             this.BuyButton.TabIndex = 4;
@@ -119,8 +115,9 @@
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(401, 371);
+            this.label3.Location = new System.Drawing.Point(294, 376);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 13);
             this.label3.TabIndex = 2;
@@ -128,15 +125,19 @@
             // 
             // QuantityTextBox
             // 
-            this.QuantityTextBox.Location = new System.Drawing.Point(473, 368);
+            this.QuantityTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.QuantityTextBox.Location = new System.Drawing.Point(366, 373);
             this.QuantityTextBox.Name = "QuantityTextBox";
             this.QuantityTextBox.Size = new System.Drawing.Size(100, 20);
             this.QuantityTextBox.TabIndex = 5;
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(164, 98);
+            this.label4.Location = new System.Drawing.Point(164, 70);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(50, 13);
             this.label4.TabIndex = 2;
@@ -144,21 +145,34 @@
             // 
             // BasketRichTextBox
             // 
-            this.BasketRichTextBox.Location = new System.Drawing.Point(126, 131);
+            this.BasketRichTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BasketRichTextBox.Location = new System.Drawing.Point(126, 103);
             this.BasketRichTextBox.Name = "BasketRichTextBox";
             this.BasketRichTextBox.Size = new System.Drawing.Size(136, 108);
             this.BasketRichTextBox.TabIndex = 6;
             this.BasketRichTextBox.Text = "";
+            // 
+            // PhotoPictureBox
+            // 
+            this.PhotoPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PhotoPictureBox.Location = new System.Drawing.Point(268, 0);
+            this.PhotoPictureBox.Name = "PhotoPictureBox";
+            this.PhotoPictureBox.Size = new System.Drawing.Size(564, 360);
+            this.PhotoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PhotoPictureBox.TabIndex = 3;
+            this.PhotoPictureBox.TabStop = false;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(831, 452);
+            this.Controls.Add(this.PhotoPictureBox);
             this.Controls.Add(this.BasketRichTextBox);
             this.Controls.Add(this.QuantityTextBox);
             this.Controls.Add(this.BuyButton);
-            this.Controls.Add(this.PhotoPictureBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
@@ -168,6 +182,8 @@
             this.Controls.Add(this.MenuComboBox);
             this.Controls.Add(this.CategoriesListBox);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(847, 491);
+            this.MinimumSize = new System.Drawing.Size(847, 491);
             this.Name = "MainForm";
             this.Text = "Лабораторная работа";
             ((System.ComponentModel.ISupportInitialize)(this.PhotoPictureBox)).EndInit();
@@ -184,12 +200,12 @@
         private System.Windows.Forms.Label PriceLabel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox PhotoPictureBox;
         private System.Windows.Forms.Button BuyButton;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox QuantityTextBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.RichTextBox BasketRichTextBox;
+        private System.Windows.Forms.PictureBox PhotoPictureBox;
     }
 }
 
