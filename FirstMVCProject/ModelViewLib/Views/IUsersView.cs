@@ -5,11 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ModelViewLib.Models
+namespace ModelViewLib.Views
 {
-    public interface IUsersModel
+    public interface IUsersView
     {
-        List<User> Load();
-        bool Register(User user);
+        void ShowUsers(List<User> users);
     }
 }
