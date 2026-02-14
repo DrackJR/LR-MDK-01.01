@@ -11,6 +11,17 @@ namespace FirstMVCProject
 {
     public class UsersTableView : DataGridView, IUsersView
     {
+        public List<User> GetSelectedUsers()
+        {
+            List<User> result = new List<User>();
+            foreach(var row in SelectedRows)
+            {
+                result.Add(row as User);
+            }
+
+            return result;
+        }
+
         public void ShowUsers(List<User> users)
         {
             DataSource = users;

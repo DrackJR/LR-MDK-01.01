@@ -28,13 +28,52 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            this.MenuToolStrip = new System.Windows.Forms.ToolStrip();
+            this.RemoveToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.MenuToolStrip.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // MenuToolStrip
+            // 
+            this.MenuToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.RemoveToolStripButton});
+            this.MenuToolStrip.Location = new System.Drawing.Point(0, 0);
+            this.MenuToolStrip.Name = "MenuToolStrip";
+            this.MenuToolStrip.Size = new System.Drawing.Size(800, 35);
+            this.MenuToolStrip.TabIndex = 0;
+            this.MenuToolStrip.Text = "toolStrip1";
+            // 
+            // RemoveToolStripButton
+            // 
+            this.RemoveToolStripButton.AutoSize = false;
+            this.RemoveToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.RemoveToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("RemoveToolStripButton.Image")));
+            this.RemoveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.RemoveToolStripButton.Name = "RemoveToolStripButton";
+            this.RemoveToolStripButton.Size = new System.Drawing.Size(32, 32);
+            this.RemoveToolStripButton.Text = "Удалить";
+            this.RemoveToolStripButton.Click += new System.EventHandler(this.RemoveToolStripButton_Click);
+            // 
+            // MainForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.Controls.Add(this.MenuToolStrip);
+            this.Name = "MainForm";
+            this.Text = "Таблица";
+            this.MenuToolStrip.ResumeLayout(false);
+            this.MenuToolStrip.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.ToolStrip MenuToolStrip;
+        private System.Windows.Forms.ToolStripButton RemoveToolStripButton;
     }
 }
 

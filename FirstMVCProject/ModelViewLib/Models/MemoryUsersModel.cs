@@ -34,5 +34,13 @@ namespace ModelViewLib.Models
             }
             return false;
         }
+
+        public void Remove(List<User> selectedUsers)
+        {
+            foreach(User u in selectedUsers)
+            {
+                selectedUsers.Remove(u);
+            }
+        }
     }
 }
