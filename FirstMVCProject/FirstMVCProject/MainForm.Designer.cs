@@ -31,7 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.MenuToolStrip = new System.Windows.Forms.ToolStrip();
             this.RemoveToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.MyUsersTableView = new FirstMVCProject.UsersTableView();
             this.MenuToolStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MyUsersTableView)).BeginInit();
             this.SuspendLayout();
             // 
             // MenuToolStrip
@@ -55,16 +57,28 @@
             this.RemoveToolStripButton.Text = "Удалить";
             this.RemoveToolStripButton.Click += new System.EventHandler(this.RemoveToolStripButton_Click);
             // 
+            // MyUsersTableView
+            // 
+            this.MyUsersTableView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.MyUsersTableView.Dock = System.Windows.Forms.DockStyle.Top;
+            this.MyUsersTableView.Location = new System.Drawing.Point(0, 35);
+            this.MyUsersTableView.Name = "MyUsersTableView";
+            this.MyUsersTableView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.MyUsersTableView.Size = new System.Drawing.Size(800, 150);
+            this.MyUsersTableView.TabIndex = 1;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.MyUsersTableView);
             this.Controls.Add(this.MenuToolStrip);
             this.Name = "MainForm";
             this.Text = "Таблица";
             this.MenuToolStrip.ResumeLayout(false);
             this.MenuToolStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MyUsersTableView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -74,6 +88,7 @@
 
         private System.Windows.Forms.ToolStrip MenuToolStrip;
         private System.Windows.Forms.ToolStripButton RemoveToolStripButton;
+        private UsersTableView MyUsersTableView;
     }
 }
 

@@ -34,12 +34,15 @@ namespace ModelViewLib.Models
             }
             return false;
         }
-
-        public void Remove(List<User> selectedUsers)
+        public void RemoveUsers(List<User> users)
         {
-            foreach(User u in selectedUsers)
+            foreach(User u in users)
             {
-                selectedUsers.Remove(u);
+                int targetIndex = allUsers_.FindIndex(local => local.Login == u.Login);
+                if (targetIndex >= 0)
+                {
+                    allUsers_.RemoveAt(targetIndex);
+                }
             }
         }
     }

@@ -16,22 +16,25 @@ namespace FirstMVCProject
 {
     public partial class MainForm: Form
     {
-        UsersTableView usersTable_ = new UsersTableView();
+        private UserPresenter presenter_;
         public MainForm()
         {
             InitializeComponent();
-            
-            Controls.Add(usersTable_);
-            usersTable_.Dock = DockStyle.Top;
-            usersTable_.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-
-            UserPresenter presenter = new UserPresenter(new MemoryUsersModel(), usersTable_);
+            presenter_ = new UserPresenter(new MemoryUsersModel(), MyUsersTableView);
         }
 
         private void RemoveToolStripButton_Click(object sender, EventArgs e)
         {
-            List<User> selectedUsers = usersTable_.GetSelectedUsers();
-            
+            if (
+            MessageBox.Show("Вы действительно хотите удалить данного пользователя?",
+                            "Внимание!",
+                            MessageBoxButtons.YesNo)
+            == DialogResult.Yes)
+
+            {
+                List<User> selectedUsers = MyUsersTableView.GetSelectedUsers();
+                presenter_.RemoveUsers(selectedUsers);
+            }
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using ModelViewLib.Models;
+using ModelViewLib.ModelViews;
 using ModelViewLib.Views;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,12 @@ namespace ModelViewLib.Presenters
             model_ = model;
             view_ = view;
            
+            view_.ShowUsers(model_.Load());
+        }
+
+        public void RemoveUsers(List<User> users)
+        {
+            model_.RemoveUsers(users);
             view_.ShowUsers(model_.Load());
         }
     }

@@ -14,9 +14,9 @@ namespace FirstMVCProject
         public List<User> GetSelectedUsers()
         {
             List<User> result = new List<User>();
-            foreach(var row in SelectedRows)
+            foreach(DataGridViewRow row in SelectedRows)
             {
-                result.Add(row as User);
+                result.Add(row.DataBoundItem as User);
             }
 
             return result;
@@ -24,6 +24,7 @@ namespace FirstMVCProject
 
         public void ShowUsers(List<User> users)
         {
+            DataSource = null;
             DataSource = users;
         }
     }

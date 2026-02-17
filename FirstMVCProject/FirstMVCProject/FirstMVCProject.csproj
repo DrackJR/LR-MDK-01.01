@@ -69,6 +69,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Properties\DataSources\FirstMVCProject.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\FirstMVCProject.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\MainForm.datasource" />
+    <None Include="Properties\DataSources\ModelViewLib.Class1.datasource" />
+    <None Include="Properties\DataSources\ModelViewLib.Models.IUsersModel.datasource" />
+    <None Include="Properties\DataSources\ModelViewLib.Models.MemoryUsersModel.datasource" />
+    <None Include="Properties\DataSources\ModelViewLib.ModelViews.User.datasource" />
+    <None Include="Properties\DataSources\ModelViewLib.Presenters.UserPresenter.datasource" />
+    <None Include="Properties\DataSources\ModelViewLib.Views.IUsersView.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\UsersTableView.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
