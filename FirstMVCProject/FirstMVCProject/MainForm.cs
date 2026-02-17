@@ -25,7 +25,7 @@ namespace FirstMVCProject
 
         private void RemoveToolStripButton_Click(object sender, EventArgs e)
         {
-            if (
+            if(
             MessageBox.Show("Вы действительно хотите удалить данного пользователя?",
                             "Внимание!",
                             MessageBoxButtons.YesNo)
