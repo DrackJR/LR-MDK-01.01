@@ -20,7 +20,7 @@ namespace FirstMVCProject
         public MainForm()
         {
             InitializeComponent();
-            presenter_ = new UserPresenter(new MemoryUsersModel(), MyUsersTableView);
+            presenter_ = new UserPresenter(new MemoryUsersModel(), MyUserTableView);
         }
 
         private void RemoveToolStripButton_Click(object sender, EventArgs e)
@@ -32,13 +32,22 @@ namespace FirstMVCProject
             == DialogResult.Yes)
 
             {
-                List<User> selectedUsers = MyUsersTableView.GetSelectedUsers();
+                List<User> selectedUsers = MyUserTableView.GetSelectedUsers();
                 presenter_.RemoveUsers(selectedUsers);
             }
         }
 
         private void AddToolStripButton_Click(object sender, EventArgs e)
-        {            
+        {
+           AdditionPeople addForm = new AdditionPeople(presenter_.GetModel());
+           addForm.ShowDialog();
+           
+           MyUserTableView.Show();
+        }
+
+        private void MainForm_Activated(object sender, EventArgs e)
+        {
+            MyUserTableView.ShowUsers(presenter_.GetModel().Load());
         }
     }
 }

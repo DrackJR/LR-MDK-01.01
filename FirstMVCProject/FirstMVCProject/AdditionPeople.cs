@@ -1,5 +1,6 @@
 ﻿using ModelViewLib.Models;
 using ModelViewLib.ModelViews;
+using ModelViewLib.Presenters;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,30 +15,29 @@ namespace FirstMVCProject
 {
     public partial class AdditionPeople: Form
     {
-        MemoryUsersModel userModel_;
         private User user_;
-
-        public User User
-        {
-            set { user_ = value; }
-            get { return user_; }
-        }
-        public AdditionPeople()
+        private IUsersModel usersModel_;
+        public AdditionPeople(IUsersModel model)
         {
             InitializeComponent();
-            userModel_ = new MemoryUsersModel();            
+            usersModel_ = model;
         }
 
         private void RegButton_Click(object sender, EventArgs e)
         {
-            List<User> allUsers = userModel_.Load();
-            User = new User(LoginTextBox.Text, PasswordTextBox.Text, NameTextBox.Text);
-            if (allUsers.Contains(User))
-            {                
+            user_ = new User(LoginTextBox.Text, PasswordTextBox.Text, NameTextBox.Text);
+            bool result = usersModel_.AddUsers(user_);
+            if (result)
+            {
+                MessageBox.Show("Пользователь успешно добавлен!", "Успех",
+                    MessageBoxButtons.OK);
+                this.Close();
             }
             else
             {
-                userModel_.AddUsers(User);
+                MessageBox.Show("Такой пользователь уже существует!", "Ошибка",
+                    MessageBoxButtons.OK);
+                this.Close();
             }
         }
     }

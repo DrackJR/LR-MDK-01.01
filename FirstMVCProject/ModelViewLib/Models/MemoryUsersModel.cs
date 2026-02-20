@@ -21,16 +21,17 @@ namespace ModelViewLib.Models
 
         public bool AddUsers(User u)
         {
-            if (allUsers_.Contains(u))
+            foreach (User user in allUsers_)
             {
-                return false;
+                if (user.Login == u.Login)
+                {
+                    return false;
+                }
             }
-            else
-            {
-                allUsers_.Add(u);
-                return true;
-            }
+            allUsers_.Add(u);
+            return true;
         }
+        
 
         public List<User> Load()
         {
