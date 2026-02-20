@@ -19,6 +19,19 @@ namespace ModelViewLib.Models
             allUsers_.Add(new User("Ксеро", "231", "Александр"));
         }
 
+        public bool AddUsers(User u)
+        {
+            if (allUsers_.Contains(u))
+            {
+                return false;
+            }
+            else
+            {
+                allUsers_.Add(u);
+                return true;
+            }
+        }
+
         public List<User> Load()
         {
             return allUsers_;

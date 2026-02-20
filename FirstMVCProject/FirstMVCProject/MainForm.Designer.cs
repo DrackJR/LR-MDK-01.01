@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.MenuToolStrip = new System.Windows.Forms.ToolStrip();
             this.RemoveToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.MyUsersTableView = new FirstMVCProject.UsersTableView();
             this.AddToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.MyUsersTableView = new FirstMVCProject.UsersTableView();
             this.MenuToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MyUsersTableView)).BeginInit();
             this.SuspendLayout();
@@ -59,6 +59,16 @@
             this.RemoveToolStripButton.Text = "Удаление пользователя";
             this.RemoveToolStripButton.Click += new System.EventHandler(this.RemoveToolStripButton_Click);
             // 
+            // AddToolStripButton
+            // 
+            this.AddToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.AddToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("AddToolStripButton.Image")));
+            this.AddToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.AddToolStripButton.Name = "AddToolStripButton";
+            this.AddToolStripButton.Size = new System.Drawing.Size(23, 32);
+            this.AddToolStripButton.Text = "Добавление пользователя";
+            this.AddToolStripButton.Click += new System.EventHandler(this.AddToolStripButton_Click);
+            // 
             // MyUsersTableView
             // 
             this.MyUsersTableView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -68,15 +78,6 @@
             this.MyUsersTableView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.MyUsersTableView.Size = new System.Drawing.Size(800, 150);
             this.MyUsersTableView.TabIndex = 1;
-            // 
-            // AddToolStripButton
-            // 
-            this.AddToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.AddToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("AddToolStripButton.Image")));
-            this.AddToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.AddToolStripButton.Name = "AddToolStripButton";
-            this.AddToolStripButton.Size = new System.Drawing.Size(23, 32);
-            this.AddToolStripButton.Text = "Добавление пользователя";
             // 
             // MainForm
             // 
