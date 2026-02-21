@@ -39,15 +39,11 @@ namespace FirstMVCProject
 
         private void AddToolStripButton_Click(object sender, EventArgs e)
         {
-           AdditionPeople addForm = new AdditionPeople(presenter_.GetModel());
-           addForm.ShowDialog();
-           
-           MyUserTableView.Show();
-        }
-
-        private void MainForm_Activated(object sender, EventArgs e)
-        {
-            MyUserTableView.ShowUsers(presenter_.GetModel().Load());
+            AdditionPeopleForm addPepopleForm = new AdditionPeopleForm();
+            if(addPepopleForm.ShowDialog() == DialogResult.Yes)
+            {
+                presenter_.AddUsers(addPepopleForm.User);
+            }         
         }
     }
 }

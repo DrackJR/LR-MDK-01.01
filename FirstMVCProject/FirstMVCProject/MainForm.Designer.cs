@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.MenuToolStrip = new System.Windows.Forms.ToolStrip();
-            this.RemoveToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.AddToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.RemoveToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.MyUserTableView = new FirstMVCProject.UsersTableView();
             this.MyUsersTableView = new FirstMVCProject.UsersTableView();
             this.MenuToolStrip.SuspendLayout();
@@ -42,13 +42,25 @@
             // MenuToolStrip
             // 
             this.MenuToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.RemoveToolStripButton,
-            this.AddToolStripButton});
+            this.AddToolStripButton,
+            this.RemoveToolStripButton});
             this.MenuToolStrip.Location = new System.Drawing.Point(0, 0);
             this.MenuToolStrip.Name = "MenuToolStrip";
             this.MenuToolStrip.Size = new System.Drawing.Size(800, 35);
             this.MenuToolStrip.TabIndex = 0;
             this.MenuToolStrip.Text = "toolStrip1";
+            // 
+            // AddToolStripButton
+            // 
+            this.AddToolStripButton.AutoSize = false;
+            this.AddToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.AddToolStripButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AddToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("AddToolStripButton.Image")));
+            this.AddToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.AddToolStripButton.Name = "AddToolStripButton";
+            this.AddToolStripButton.Size = new System.Drawing.Size(32, 32);
+            this.AddToolStripButton.Text = "Добавление пользователя";
+            this.AddToolStripButton.Click += new System.EventHandler(this.AddToolStripButton_Click);
             // 
             // RemoveToolStripButton
             // 
@@ -60,16 +72,6 @@
             this.RemoveToolStripButton.Size = new System.Drawing.Size(32, 32);
             this.RemoveToolStripButton.Text = "Удаление пользователя";
             this.RemoveToolStripButton.Click += new System.EventHandler(this.RemoveToolStripButton_Click);
-            // 
-            // AddToolStripButton
-            // 
-            this.AddToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.AddToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("AddToolStripButton.Image")));
-            this.AddToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.AddToolStripButton.Name = "AddToolStripButton";
-            this.AddToolStripButton.Size = new System.Drawing.Size(23, 32);
-            this.AddToolStripButton.Text = "Добавление пользователя";
-            this.AddToolStripButton.Click += new System.EventHandler(this.AddToolStripButton_Click);
             // 
             // MyUserTableView
             // 
@@ -95,12 +97,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 195);
             this.Controls.Add(this.MyUserTableView);
             this.Controls.Add(this.MenuToolStrip);
             this.Name = "MainForm";
             this.Text = "Таблица";
-            this.Activated += new System.EventHandler(this.MainForm_Activated);
             this.MenuToolStrip.ResumeLayout(false);
             this.MenuToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MyUserTableView)).EndInit();

@@ -12,7 +12,7 @@ namespace ModelViewLib.Presenters
     public class UserPresenter
     {
         private IUsersModel model_;
-        private IUsersView view_;
+        private IUsersView view_;        
         public UserPresenter(IUsersModel model, IUsersView view)
         {
             model_ = model;
@@ -28,13 +28,9 @@ namespace ModelViewLib.Presenters
         }
 
         public void AddUsers(User u)
-        {
+        {            
             model_.AddUsers(u);
             view_.ShowUsers(model_.Load());
-        }
-        public IUsersModel GetModel()
-        {
-            return model_;
         }
     }
 }
