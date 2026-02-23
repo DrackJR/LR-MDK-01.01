@@ -41,12 +41,13 @@
             // 
             // MenuToolStrip
             // 
+            this.MenuToolStrip.ImageScalingSize = new System.Drawing.Size(44, 44);
             this.MenuToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.AddToolStripButton,
             this.RemoveToolStripButton});
             this.MenuToolStrip.Location = new System.Drawing.Point(0, 0);
             this.MenuToolStrip.Name = "MenuToolStrip";
-            this.MenuToolStrip.Size = new System.Drawing.Size(800, 35);
+            this.MenuToolStrip.Size = new System.Drawing.Size(341, 47);
             this.MenuToolStrip.TabIndex = 0;
             this.MenuToolStrip.Text = "toolStrip1";
             // 
@@ -58,7 +59,7 @@
             this.AddToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("AddToolStripButton.Image")));
             this.AddToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.AddToolStripButton.Name = "AddToolStripButton";
-            this.AddToolStripButton.Size = new System.Drawing.Size(32, 32);
+            this.AddToolStripButton.Size = new System.Drawing.Size(44, 44);
             this.AddToolStripButton.Text = "Добавление пользователя";
             this.AddToolStripButton.Click += new System.EventHandler(this.AddToolStripButton_Click);
             // 
@@ -69,7 +70,7 @@
             this.RemoveToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("RemoveToolStripButton.Image")));
             this.RemoveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.RemoveToolStripButton.Name = "RemoveToolStripButton";
-            this.RemoveToolStripButton.Size = new System.Drawing.Size(32, 32);
+            this.RemoveToolStripButton.Size = new System.Drawing.Size(44, 44);
             this.RemoveToolStripButton.Text = "Удаление пользователя";
             this.RemoveToolStripButton.Click += new System.EventHandler(this.RemoveToolStripButton_Click);
             // 
@@ -77,10 +78,10 @@
             // 
             this.MyUserTableView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.MyUserTableView.Dock = System.Windows.Forms.DockStyle.Top;
-            this.MyUserTableView.Location = new System.Drawing.Point(0, 35);
+            this.MyUserTableView.Location = new System.Drawing.Point(0, 47);
             this.MyUserTableView.Name = "MyUserTableView";
             this.MyUserTableView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.MyUserTableView.Size = new System.Drawing.Size(800, 150);
+            this.MyUserTableView.Size = new System.Drawing.Size(341, 150);
             this.MyUserTableView.TabIndex = 1;
             // 
             // MyUsersTableView
@@ -97,11 +98,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 195);
+            this.ClientSize = new System.Drawing.Size(341, 195);
             this.Controls.Add(this.MyUserTableView);
             this.Controls.Add(this.MenuToolStrip);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(357, 234);
+            this.MinimizeBox = false;
             this.Name = "MainForm";
-            this.Text = "Таблица";
+            this.Text = "Таблица пользователей";
             this.MenuToolStrip.ResumeLayout(false);
             this.MenuToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MyUserTableView)).EndInit();

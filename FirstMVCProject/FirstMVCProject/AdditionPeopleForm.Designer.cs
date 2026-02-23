@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdditionPeopleForm));
             this.LoginTextBox = new System.Windows.Forms.TextBox();
             this.PasswordTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -127,7 +128,10 @@
             this.Controls.Add(this.NameTextBox);
             this.Controls.Add(this.PasswordTextBox);
             this.Controls.Add(this.LoginTextBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(388, 271);
+            this.MinimizeBox = false;
             this.Name = "AdditionPeopleForm";
             this.Text = "Регистрация";
             this.ResumeLayout(false);

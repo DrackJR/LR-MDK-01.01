@@ -77,6 +77,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\DataSources\FirstMVCProject.Properties.Resources.datasource" />
     <None Include="Properties\DataSources\FirstMVCProject.Properties.Settings.datasource" />
@@ -107,6 +108,9 @@
       <Project>{cbe00200-73e4-4552-b79f-2bd9de950909}</Project>
       <Name>ModelViewLib</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AdditionButton.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
