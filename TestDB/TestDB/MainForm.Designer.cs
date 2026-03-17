@@ -1,6 +1,6 @@
 ﻿namespace TestDB
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -28,13 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.UsersDataGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.UsersDataGridView)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // UsersDataGridView
+            // 
+            this.UsersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.UsersDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.UsersDataGridView.Location = new System.Drawing.Point(0, 0);
+            this.UsersDataGridView.Name = "UsersDataGridView";
+            this.UsersDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.UsersDataGridView.Size = new System.Drawing.Size(800, 450);
+            this.UsersDataGridView.TabIndex = 0;
+            // 
+            // MainForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.Controls.Add(this.UsersDataGridView);
+            this.Name = "MainForm";
+            this.Text = "DataBase";
+            ((System.ComponentModel.ISupportInitialize)(this.UsersDataGridView)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView UsersDataGridView;
     }
 }
 
