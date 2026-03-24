@@ -45,7 +45,7 @@
             // 
             // CreateButton
             // 
-            this.CreateButton.Location = new System.Drawing.Point(38, 310);
+            this.CreateButton.Location = new System.Drawing.Point(445, 393);
             this.CreateButton.Name = "CreateButton";
             this.CreateButton.Size = new System.Drawing.Size(105, 45);
             this.CreateButton.TabIndex = 1;
@@ -55,7 +55,7 @@
             // 
             // deleteButton
             // 
-            this.deleteButton.Location = new System.Drawing.Point(156, 310);
+            this.deleteButton.Location = new System.Drawing.Point(563, 393);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(105, 45);
             this.deleteButton.TabIndex = 2;
@@ -65,7 +65,7 @@
             // 
             // ClearButton
             // 
-            this.ClearButton.Location = new System.Drawing.Point(276, 310);
+            this.ClearButton.Location = new System.Drawing.Point(683, 393);
             this.ClearButton.Name = "ClearButton";
             this.ClearButton.Size = new System.Drawing.Size(105, 45);
             this.ClearButton.TabIndex = 1;
@@ -73,7 +73,7 @@
             this.ClearButton.UseVisualStyleBackColor = true;
             this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
             // 
-            // Form1
+            // MainFrom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -82,8 +82,8 @@
             this.Controls.Add(this.ClearButton);
             this.Controls.Add(this.CreateButton);
             this.Controls.Add(this.dataGridView);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "MainFrom";
+            this.Text = "Таблица пользователей";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
 
