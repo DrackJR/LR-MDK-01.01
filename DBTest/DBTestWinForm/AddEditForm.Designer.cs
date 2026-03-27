@@ -1,6 +1,6 @@
 ﻿namespace DBTestWinForm
 {
-    partial class AddForm
+    partial class AddEditForm
     {
         /// <summary>
         /// Required designer variable.

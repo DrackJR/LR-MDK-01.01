@@ -3,14 +3,25 @@ using System.Windows.Forms;
 
 namespace DBTestWinForm
 {
-    public partial class AddForm: Form
+    public partial class AddEditForm: Form
     {
         private PgUsersLoader loader_;
-        public AddForm(PgUsersLoader loader)
+        private bool editMode_ = false;
+        public AddEditForm(PgUsersLoader loader)
         {
             InitializeComponent();
             loader_ = loader;
             ApplyButton.Enabled = false;
+        }
+
+        public void SetUser(User u)
+        {
+            LoginTextBox.Text = u.Login;
+            LoginTextBox.Enabled = false;
+            PasswordTextBox.Text = u.Password;
+            NameTextBox.Text = u.Name;
+            AgeNumericUpDown.Value = u.Age;
+            editMode_ = true;
         }
 
         public void AddUser()
@@ -24,9 +35,27 @@ namespace DBTestWinForm
             });
         }
 
+        public void EditUser()
+        {
+            loader_.EditUser(new User
+            {
+                Login = LoginTextBox.Text,
+                Password = PasswordTextBox.Text,
+                Name = NameTextBox.Text,
+                Age = (int)AgeNumericUpDown.Value
+            });
+        }
+
         private void OKButton_Click(object sender, EventArgs e)
         {
-            AddUser();
+            if (editMode_)
+            {
+                EditUser();
+            }
+            else
+            {
+                AddUser();
+            }        
             Close();
         }
 
@@ -37,7 +66,14 @@ namespace DBTestWinForm
 
         private void ApplyButton_Click(object sender, EventArgs e)
         {
-            AddUser();
+            if (editMode_)
+            {
+                EditUser();
+            }
+            else
+            {
+                AddUser();
+            }
             ApplyButton.Enabled = false;
         }
 

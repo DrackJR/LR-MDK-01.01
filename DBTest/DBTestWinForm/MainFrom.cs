@@ -27,7 +27,7 @@ namespace DBTestWinForm
         private void ClearButton_Click(object sender, EventArgs e)
         {
             var result = MessageBox.Show("Вы действительно хотите очистить всю таблицу?", "Внимание!", MessageBoxButtons.OKCancel);
-            if(result == DialogResult.OK)
+            if (result == DialogResult.OK)
             {
                 loader_.ClearUser();
             }
@@ -35,8 +35,17 @@ namespace DBTestWinForm
 
         private void CreateButton_Click(object sender, EventArgs e)
         {
-            AddForm additionForm = new AddForm(loader_);
+            AddEditForm additionForm = new AddEditForm(loader_);
             additionForm.Show();
+        }
+
+        private void EditButton_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow row = dataGridView.SelectedRows[0];
+            User selectedUser = row.DataBoundItem as User;
+            AddEditForm addEditForm = new AddEditForm(loader_);
+            addEditForm.SetUser(selectedUser);
+            addEditForm.Show();
         }
     }
 }
