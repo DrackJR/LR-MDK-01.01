@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace TestFileStorage
 {
     public partial class LoginForm: Form
     {
-        private FileUserStorage authorization_ = new FileUserStorage();
+        private DBUserStorage authorization_ = new DBUserStorage();
         private List<string> logins_ = new List<string>();
         public LoginForm()
         {
@@ -29,7 +28,7 @@ namespace TestFileStorage
             string login = LoginComboBox.Text;
             string password = PasswordTextBox.Text;
 
-            if (authorization_.Authorize(login,password))
+            if (authorization_.CheckUser(login))
             {
                 MessageBox.Show("Вы в системе");
             }
@@ -42,21 +41,8 @@ namespace TestFileStorage
 
         private void RegistrationButton_Click(object sender, EventArgs e)
         {
-            SighUpForm sighUp = new SighUpForm();
-            sighUp.Show();
-        }
-
-        private void LoginForm_MouseMove(object sender, MouseEventArgs e)
-        {
-            logins_.Clear();
-            List<User> allUsers = authorization_.Load();
-
-            foreach (User u in allUsers)
-            {
-                logins_.Add(u.Login);
-            }
-            LoginComboBox.DataSource = null;
-            LoginComboBox.DataSource = logins_;
+            SighUpForm signUp = new SighUpForm();
+            signUp.Show();
         }
     }
 }

@@ -107,7 +107,6 @@
             this.Controls.Add(this.PasswordTextBox);
             this.Name = "LoginForm";
             this.Text = "Вход в аккаунт";
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.LoginForm_MouseMove);
             this.ResumeLayout(false);
             this.PerformLayout();
 

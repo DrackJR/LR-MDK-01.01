@@ -5,7 +5,7 @@ namespace TestFileStorage
 {
     public partial class SighUpForm: Form
     {
-        private FileUserStorage registration_ = new FileUserStorage();
+        private DBUserStorage registration_ = new DBUserStorage();
         public SighUpForm()
         {
             InitializeComponent();
