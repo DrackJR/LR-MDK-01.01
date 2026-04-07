@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35818.85 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Offset", "Offset\Offset.csproj", "{1460BD06-77F1-4603-9C4E-A6AF050E6D71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OffesetLib", "OffesetLib\OffesetLib.csproj", "{64551380-180B-417B-97A5-A8A92CCAB911}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1460BD06-77F1-4603-9C4E-A6AF050E6D71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1460BD06-77F1-4603-9C4E-A6AF050E6D71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1460BD06-77F1-4603-9C4E-A6AF050E6D71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1460BD06-77F1-4603-9C4E-A6AF050E6D71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64551380-180B-417B-97A5-A8A92CCAB911}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64551380-180B-417B-97A5-A8A92CCAB911}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64551380-180B-417B-97A5-A8A92CCAB911}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64551380-180B-417B-97A5-A8A92CCAB911}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {208B3D19-CDE7-4763-BAE3-103934C4A0D6}
+	EndGlobalSection
+EndGlobal
